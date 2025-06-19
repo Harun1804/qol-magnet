@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -16,6 +17,9 @@ public class BasicMagnet extends BaseMagnet {
 
     public BasicMagnet(Settings settings) {
         super(settings);
+
+        // Optionally, you can set up a whitelist or blacklist here
+        addToBlacklist(Items.ROTTEN_FLESH);
     }
 
     @Override
